@@ -11,14 +11,14 @@ signal file_popup_menu_requested(at_position: Vector2)
 ## Emitted when double clicking a file
 signal file_double_clicked(file_path: String)
 
-const FileIcon = preload("res://addons/orchestrator/assets/icons/Orchestrator_16x16.png")
+const FileIcon = preload("res://addons/orchestrator/assets/icons/GDVScript.svg")
 
 # The file to be applied
 var filter : String : set = set_filter, get = get_filter
 
 # Lookup of files
 var _files_lookup : Dictionary = {}
-var _files : PackedStringArray = [] : set = set_files, get = get_files
+var _files : Array[String] = [] : set = set_files, get = get_files
 
 # List of files that have been modified but not yet saved
 var _unsaved_files_lookup : Array[String] = []
@@ -53,7 +53,7 @@ func set_files(next_files) -> void:
 	apply_filter()
 
 
-func get_files() -> PackedStringArray:
+func get_files() -> Array[String]:
 	return _files
 
 

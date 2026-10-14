@@ -422,4 +422,3 @@ class ShowMessageChoice:
 	var scene_node: Node
 	var condition: String
 	var message: String
-

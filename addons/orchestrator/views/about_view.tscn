@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bptlhwv2xyyqr"]
+[gd_scene format=3 uid="uid://bptlhwv2xyyqr"]
 
-[ext_resource type="Script" path="res://addons/orchestrator/views/about_view.gd" id="1_xky0g"]
-[ext_resource type="Texture2D" path="res://addons/orchestrator/assets/icons/OrchestratorLogo.svg" id="2_08bvf"]
+[ext_resource type="Script" uid="uid://qx4luix7agpu" path="res://addons/orchestrator/views/about_view.gd" id="1_xky0g"]
+[ext_resource type="Texture2D" uid="uid://cu01n5b4eyqq0" path="res://addons/orchestrator/assets/icons/GDVScript.svg" id="2_2cn64"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c516b"]
 bg_color = Color(0.113725, 0.133333, 0.160784, 1)
@@ -13,7 +13,7 @@ subpixel_positioning = 0
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3s5y"]
 bg_color = Color(0.145098, 0.168627, 0.203922, 1)
 
-[node name="AboutView" type="Panel"]
+[node name="AboutView" type="Panel" unique_id=633777534]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,7 +22,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_c516b")
 script = ExtResource("1_xky0g")
 
-[node name="AboutLayout" type="VBoxContainer" parent="."]
+[node name="AboutLayout" type="VBoxContainer" parent="." unique_id=1138691605]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,7 +33,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 focus_mode = 2
 
-[node name="Banner" type="MarginContainer" parent="AboutLayout"]
+[node name="Banner" type="MarginContainer" parent="AboutLayout" unique_id=2082627562]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -41,41 +41,42 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="AboutLayout/Banner"]
+[node name="HBoxContainer" type="HBoxContainer" parent="AboutLayout/Banner" unique_id=1695949044]
 layout_mode = 2
 theme_override_constants/separation = 25
 alignment = 1
 
-[node name="LogoContainer" type="MarginContainer" parent="AboutLayout/Banner/HBoxContainer"]
+[node name="LogoContainer" type="MarginContainer" parent="AboutLayout/Banner/HBoxContainer" unique_id=1934622422]
 layout_mode = 2
 theme_override_constants/margin_left = 100
 
-[node name="HBoxContainer" type="HBoxContainer" parent="AboutLayout/Banner/HBoxContainer/LogoContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="AboutLayout/Banner/HBoxContainer/LogoContainer" unique_id=1693799062]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Logo" type="TextureRect" parent="AboutLayout/Banner/HBoxContainer/LogoContainer/HBoxContainer"]
+[node name="Logo" type="TextureRect" parent="AboutLayout/Banner/HBoxContainer/LogoContainer/HBoxContainer" unique_id=1104136498]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-texture = ExtResource("2_08bvf")
+texture = ExtResource("2_2cn64")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CopyrightContainer" type="VBoxContainer" parent="AboutLayout/Banner/HBoxContainer"]
+[node name="CopyrightContainer" type="VBoxContainer" parent="AboutLayout/Banner/HBoxContainer" unique_id=1915070268]
 layout_mode = 2
 theme_override_constants/separation = -5
 alignment = 1
 
-[node name="Version" type="Label" parent="AboutLayout/Banner/HBoxContainer/CopyrightContainer"]
+[node name="Version" type="Label" parent="AboutLayout/Banner/HBoxContainer/CopyrightContainer" unique_id=1887973519]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Godot Orchestrator v1.0.5"
+text = "GDVScript v1.0.5"
 
-[node name="Copyright" type="Label" parent="AboutLayout/Banner/HBoxContainer/CopyrightContainer"]
+[node name="Copyright" type="Label" parent="AboutLayout/Banner/HBoxContainer/CopyrightContainer" unique_id=28098651]
 layout_mode = 2
-text = "(c) 2023 Vahera Studios, LLC and its contributors"
+text = "(c) 2023 Vahera Studios, LLC and its contributors
+(c) 2026 Yni Viar and GDVScript contributors"
 
-[node name="Tabs" type="MarginContainer" parent="AboutLayout"]
+[node name="Tabs" type="MarginContainer" parent="AboutLayout" unique_id=605903058]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 10
@@ -83,15 +84,17 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="TabContainer" type="TabContainer" parent="AboutLayout/Tabs"]
+[node name="TabContainer" type="TabContainer" parent="AboutLayout/Tabs" unique_id=1128874021]
 layout_mode = 2
 size_flags_vertical = 3
 tab_alignment = 1
+current_tab = 0
 
-[node name="Authors" type="TabBar" parent="AboutLayout/Tabs/TabContainer"]
+[node name="Authors" type="TabBar" parent="AboutLayout/Tabs/TabContainer" unique_id=739433140]
 layout_mode = 2
+metadata/_tab_index = 0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="AboutLayout/Tabs/TabContainer/Authors"]
+[node name="ScrollContainer" type="ScrollContainer" parent="AboutLayout/Tabs/TabContainer/Authors" unique_id=471987431]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -99,82 +102,83 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer" unique_id=1283301548]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer" unique_id=1828686873]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="ProjectFounders" type="Label" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer"]
+[node name="ProjectFounders" type="Label" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1136854676]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_1rny5")
 text = "Project Founders"
 
-[node name="PanelContainer" type="PanelContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer" unique_id=887044839]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_r3s5y")
 
-[node name="Founders" type="VBoxContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer"]
+[node name="Founders" type="VBoxContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer" unique_id=676473752]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Founder1" type="Label" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/Founders"]
+[node name="Founder1" type="Label" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/Founders" unique_id=360700487]
 layout_mode = 2
 text = "Darryl Agee (Zomphie)"
 vertical_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/Founders"]
+[node name="HSeparator" type="HSeparator" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/Founders" unique_id=1297907408]
 layout_mode = 2
 
-[node name="Founder2" type="Label" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/Founders"]
+[node name="Founder2" type="Label" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/Founders" unique_id=395642842]
 layout_mode = 2
 text = "Chris Cranford (Naros)"
 vertical_alignment = 1
 
-[node name="LeadDeveloper" type="Label" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer"]
+[node name="LeadDeveloper" type="Label" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer" unique_id=543779731]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_1rny5")
 text = "Lead Developer"
 
-[node name="PanelContainer2" type="PanelContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer"]
+[node name="PanelContainer2" type="PanelContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1727028527]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_r3s5y")
 
-[node name="LeadDevelopers" type="VBoxContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer2"]
+[node name="LeadDevelopers" type="VBoxContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer2" unique_id=1654286281]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="LeadDeveloper1" type="Label" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer2/LeadDevelopers"]
+[node name="LeadDeveloper1" type="Label" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer2/LeadDevelopers" unique_id=651166337]
 layout_mode = 2
 text = "Chris Cranford (Naros)"
 vertical_alignment = 1
 
-[node name="Developers" type="Label" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer"]
+[node name="Developers" type="Label" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1702404422]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_1rny5")
 text = "Developers
 "
 
-[node name="PanelContainer3" type="PanelContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer"]
+[node name="PanelContainer3" type="PanelContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1451476861]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_r3s5y")
 
-[node name="Developers" type="VBoxContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer3"]
+[node name="Developers" type="VBoxContainer" parent="AboutLayout/Tabs/TabContainer/Authors/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer3" unique_id=933092864]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="License" type="TabBar" parent="AboutLayout/Tabs/TabContainer"]
+[node name="License" type="TabBar" parent="AboutLayout/Tabs/TabContainer" unique_id=250524380]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 1
 
-[node name="License" type="TextEdit" parent="AboutLayout/Tabs/TabContainer/License"]
+[node name="License" type="TextEdit" parent="AboutLayout/Tabs/TabContainer/License" unique_id=1196418299]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -193,14 +197,14 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 "
 wrap_mode = 1
 
-[node name="ButtonContainer" type="MarginContainer" parent="AboutLayout"]
+[node name="ButtonContainer" type="MarginContainer" parent="AboutLayout" unique_id=1676474147]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="OkButton" type="Button" parent="AboutLayout/ButtonContainer"]
+[node name="OkButton" type="Button" parent="AboutLayout/ButtonContainer" unique_id=1595798402]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4

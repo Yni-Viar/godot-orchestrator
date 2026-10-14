@@ -125,5 +125,3 @@ static func set_user_value(key: String, value) -> void:
 
 static func get_user_value(key: String, default_value : Variant = null) -> Variant:
 	return get_user_config().get(key, default_value)
-
-

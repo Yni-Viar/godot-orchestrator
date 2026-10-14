@@ -65,14 +65,13 @@ func _ready():
 
 func set_plugin(plugin: EditorPlugin) -> void:
 	editor_plugin = plugin
-	editor_interface = editor_plugin.get_editor_interface()
 
 	# This must be called here rather than in _ready because if the scene is
 	# opened in the editor, the editor will invoke the _enter_tree and _ready
 	# functions because this is a tool-annotated script. Since the plugin.gd
 	# isn't called in this case to initialize the editor plugin, the plugin
 	# details aren't available and therefore must be guarded.
-	editor_interface.get_file_system_dock().files_moved.connect(_on_files_moved)
+	EditorInterface.get_file_system_dock().files_moved.connect(_on_files_moved)
 
 
 func update_project_settings() -> void:
@@ -185,10 +184,10 @@ func _setup_external_docs() -> void:
 	%OpenDocs.flat = true
 	%OpenDocs.icon = get_theme_icon("ExternalLink", "EditorIcons")
 
-	var config = ConfigFile.new()
-	config.load("res://addons/orchestrator/plugin.cfg")
-	var doc_url = config.get_value("plugin", "documentation_url")
-	%OpenDocs.pressed.connect(func(): OS.shell_open(doc_url))
+	#var config = ConfigFile.new()
+	#config.load("res://addons/orchestrator/plugin.cfg")
+	#var doc_url = config.get_value("plugin", "documentation_url")
+	%OpenDocs.pressed.connect(func(): OS.alert("Coming soon..."))
 
 
 func _save_all_orchestrations() -> void:

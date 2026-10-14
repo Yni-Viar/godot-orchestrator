@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://2iifpqvley8n"]
+
+[ext_resource type="Script" uid="uid://l6ijodveecn3" path="res://addons/orchestrator/orchestrator_node_factory.gd" id="1_6p1ep"]
+
+[node name="OrchestratorNodeFactory" type="Node" unique_id=968876065]
+script = ExtResource("1_6p1ep")

@@ -8,17 +8,26 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Orchestrator"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-OrchestratorNodeFactory="*res://addons/orchestrator/orchestrator_node_factory.gd"
-Orchestrator="*res://addons/orchestrator/orchestrator.gd"
+OrchestratorNodeFactory="*uid://2iifpqvley8n"
+Orchestrator="*uid://caijhi7pwy56j"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/orchestrator/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

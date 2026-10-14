@@ -76,8 +76,8 @@ func _is_script_valid_with_noarg_init(script: Script) -> bool:
 	return false
 
 
-static func _get_all_scripts_in_path(path: String = "res://") -> PackedStringArray:
-	var files: PackedStringArray = []
+static func _get_all_scripts_in_path(path: String = "res://") -> Array[String]:
+	var files: Array[String] = []
 	if DirAccess.dir_exists_absolute(path):
 		var dir = DirAccess.open(path)
 		dir.list_dir_begin()

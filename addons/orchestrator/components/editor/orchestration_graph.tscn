@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5dvbnjltdq3e"]
+[gd_scene format=3 uid="uid://c5dvbnjltdq3e"]
 
-[ext_resource type="Script" path="res://addons/orchestrator/components/editor/orchestration_graph.gd" id="1_6kom1"]
+[ext_resource type="Script" uid="uid://dq16kgdiq6243" path="res://addons/orchestrator/components/editor/orchestration_graph.gd" id="1_6kom1"]
 
-[node name="OrchestrationGraph" type="GraphEdit"]
+[node name="OrchestrationGraph" type="GraphEdit" unique_id=603780990]
 right_disconnects = true
 minimap_enabled = false
 script = ExtResource("1_6kom1")

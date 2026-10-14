@@ -2,15 +2,16 @@
 extends EditorPlugin
 ## Orchestrator editor plugin
 
-const ADDON_NAME = "Orchestrator"
+const ADDON_NAME = "GDVScript"
+const ADDON_COMPATIBILITY_NAME = "Orchestrator"
 const ADDON_NODE_FACTORY_NAME = "OrchestratorNodeFactory"
 
 const MAIN_VIEW_SCENE = "res://addons/orchestrator/views/main_view.tscn"
 const ORCHESTRATOR_SETTINGS = "res://addons/orchestrator/orchestrator_settings.gd"
-const ORCHESTRATOR_NODE_FACTORY = "res://addons/orchestrator/orchestrator_node_factory.gd"
+const ORCHESTRATOR_NODE_FACTORY = "res://addons/orchestrator/gdvscript_factory.tscn"
 const ORCHESTRATOR = "res://addons/orchestrator/orchestrator.gd"
 
-const OrchestratorEditorIcon = preload("res://addons/orchestrator/assets/icons/Orchestrator_16x16.png")
+const OrchestratorEditorIcon = preload("res://addons/orchestrator/assets/icons/GDVScript.svg")
 
 ## The plugin's main view.
 var main_view
@@ -31,7 +32,7 @@ func _ready():
 
 func _enter_tree():
 	add_autoload_singleton(ADDON_NODE_FACTORY_NAME, ORCHESTRATOR_NODE_FACTORY)
-	add_autoload_singleton(ADDON_NAME, ORCHESTRATOR)
+	add_autoload_singleton(ADDON_COMPATIBILITY_NAME, ORCHESTRATOR)
 
 	if not Engine.is_editor_hint():
 		return
@@ -44,18 +45,17 @@ func _enter_tree():
 	main_view = load(MAIN_VIEW_SCENE).instantiate()
 	main_view.set_plugin(self)
 
-	get_editor_interface().get_editor_main_screen().add_child(main_view)
+	EditorInterface.get_editor_main_screen().add_child(main_view)
 
 	_make_visible(false)
 
-	var editor = get_editor_interface()
-	editor.get_resource_filesystem().filesystem_changed.connect(_on_filesystem_changed)
-	editor.get_file_system_dock().files_moved.connect(_on_files_moved)
-	editor.get_file_system_dock().file_removed.connect(_on_file_removed)
+	EditorInterface.get_resource_filesystem().filesystem_changed.connect(_on_filesystem_changed)
+	EditorInterface.get_file_system_dock().files_moved.connect(_on_files_moved)
+	EditorInterface.get_file_system_dock().file_removed.connect(_on_file_removed)
 
 
 func _exit_tree():
-	remove_autoload_singleton(ADDON_NAME)
+	remove_autoload_singleton(ADDON_COMPATIBILITY_NAME)
 	remove_autoload_singleton(ADDON_NODE_FACTORY_NAME)
 
 	if project_settings_changed.is_connected(_on_project_settings_changed):
@@ -64,10 +64,9 @@ func _exit_tree():
 	if is_instance_valid(main_view):
 		main_view.queue_free()
 
-	var editor = get_editor_interface()
-	editor.get_resource_filesystem().filesystem_changed.disconnect(_on_filesystem_changed)
-	editor.get_file_system_dock().files_moved.disconnect(_on_files_moved)
-	editor.get_file_system_dock().file_removed.disconnect(_on_file_removed)
+	EditorInterface.get_resource_filesystem().filesystem_changed.disconnect(_on_filesystem_changed)
+	EditorInterface.get_file_system_dock().files_moved.disconnect(_on_files_moved)
+	EditorInterface.get_file_system_dock().file_removed.disconnect(_on_file_removed)
 
 
 func _has_main_screen() -> bool:

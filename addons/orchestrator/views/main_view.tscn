@@ -1,25 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://wfb5pent2480"]
+[gd_scene format=3 uid="uid://wfb5pent2480"]
 
-[ext_resource type="Script" path="res://addons/orchestrator/views/main_view.gd" id="1_pq8xr"]
-[ext_resource type="PackedScene" uid="uid://citypnc51nx10" path="res://addons/orchestrator/components/editor/plugin_update_available_button.tscn" id="2_hestl"]
+[ext_resource type="Script" uid="uid://je4hq0xwvk62" path="res://addons/orchestrator/views/main_view.gd" id="1_pq8xr"]
 [ext_resource type="PackedScene" uid="uid://dsqj77ik0jgyp" path="res://addons/orchestrator/components/editor/files_list.tscn" id="3_nsrnn"]
 [ext_resource type="PackedScene" uid="uid://cx4q7e16k284a" path="res://addons/orchestrator/components/editor/node_tree_list.tscn" id="4_t06vx"]
 [ext_resource type="PackedScene" uid="uid://bptlhwv2xyyqr" path="res://addons/orchestrator/views/about_view.tscn" id="5_2m6ak"]
 [ext_resource type="PackedScene" uid="uid://c5dvbnjltdq3e" path="res://addons/orchestrator/components/editor/orchestration_graph.tscn" id="5_pbcxq"]
 
-[sub_resource type="Image" id="Image_wfagp"]
-data = {
-"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
-"format": "RGBA8",
-"height": 16,
-"mipmaps": false,
-"width": 16
-}
+[sub_resource type="DPITexture" id="DPITexture_efuxl"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>
+"
 
-[sub_resource type="ImageTexture" id="ImageTexture_ppusv"]
-image = SubResource("Image_wfagp")
-
-[node name="MainView" type="Control"]
+[node name="MainView" type="Control" unique_id=1297467941]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,7 +21,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_pq8xr")
 
-[node name="Margin" type="MarginContainer" parent="."]
+[node name="Margin" type="MarginContainer" parent="." unique_id=1812243795]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,27 +33,27 @@ theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Margin"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Margin" unique_id=13737429]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Margin/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Margin/VBoxContainer" unique_id=495972025]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="MenuBar" type="MenuBar" parent="Margin/VBoxContainer/HBoxContainer"]
+[node name="MenuBar" type="MenuBar" parent="Margin/VBoxContainer/HBoxContainer" unique_id=1564057647]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/h_separation = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Margin/VBoxContainer/HBoxContainer/MenuBar"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Margin/VBoxContainer/HBoxContainer/MenuBar" unique_id=1621545877]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/separation = 0
 
-[node name="FileMenu" type="MenuButton" parent="Margin/VBoxContainer/HBoxContainer/MenuBar/HBoxContainer"]
+[node name="FileMenu" type="MenuButton" parent="Margin/VBoxContainer/HBoxContainer/MenuBar/HBoxContainer" unique_id=1402551587]
 layout_mode = 2
 size_flags_vertical = 0
 text = "File"
@@ -71,7 +62,6 @@ popup/item_0/text = "New Orchestration..."
 popup/item_0/id = 1
 popup/item_1/text = "Open..."
 popup/item_1/id = 2
-popup/item_2/text = ""
 popup/item_2/id = -1
 popup/item_2/separator = true
 popup/item_3/text = "Save"
@@ -83,13 +73,11 @@ popup/item_4/disabled = true
 popup/item_5/text = "Save All"
 popup/item_5/id = 5
 popup/item_5/disabled = true
-popup/item_6/text = ""
 popup/item_6/id = -1
 popup/item_6/separator = true
 popup/item_7/text = "Show in FileSystem"
 popup/item_7/id = 11
 popup/item_7/disabled = true
-popup/item_8/text = ""
 popup/item_8/id = -1
 popup/item_8/separator = true
 popup/item_9/text = "Close"
@@ -98,19 +86,17 @@ popup/item_9/disabled = true
 popup/item_10/text = "Close All"
 popup/item_10/id = 7
 popup/item_10/disabled = true
-popup/item_11/text = ""
 popup/item_11/id = -1
 popup/item_11/separator = true
 popup/item_12/text = "Run"
 popup/item_12/id = 9
 popup/item_12/disabled = true
-popup/item_13/text = ""
 popup/item_13/id = -1
 popup/item_13/separator = true
 popup/item_14/text = "Toggle Orchestrations Panel"
 popup/item_14/id = 13
 
-[node name="HelpMenu" type="MenuButton" parent="Margin/VBoxContainer/HBoxContainer/MenuBar/HBoxContainer"]
+[node name="HelpMenu" type="MenuButton" parent="Margin/VBoxContainer/HBoxContainer/MenuBar/HBoxContainer" unique_id=1211968866]
 layout_mode = 2
 size_flags_vertical = 0
 text = "Help"
@@ -118,11 +104,11 @@ item_count = 1
 popup/item_0/text = "About Orchestrator"
 popup/item_0/id = 10
 
-[node name="MenuBar2" type="MenuBar" parent="Margin/VBoxContainer/HBoxContainer"]
+[node name="MenuBar2" type="MenuBar" parent="Margin/VBoxContainer/HBoxContainer" unique_id=1673457910]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Margin/VBoxContainer/HBoxContainer/MenuBar2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Margin/VBoxContainer/HBoxContainer/MenuBar2" unique_id=42223576]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -131,75 +117,71 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 2
 
-[node name="OpenDocs" type="Button" parent="Margin/VBoxContainer/HBoxContainer/MenuBar2/HBoxContainer"]
+[node name="OpenDocs" type="Button" parent="Margin/VBoxContainer/HBoxContainer/MenuBar2/HBoxContainer" unique_id=192959167]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 4
 text = "Online Docs"
-icon = SubResource("ImageTexture_ppusv")
+icon = SubResource("DPITexture_efuxl")
 flat = true
 
-[node name="VSeparator" type="VSeparator" parent="Margin/VBoxContainer/HBoxContainer/MenuBar2/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="Margin/VBoxContainer/HBoxContainer/MenuBar2/HBoxContainer" unique_id=1273400865]
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="Version" type="Label" parent="Margin/VBoxContainer/HBoxContainer/MenuBar2/HBoxContainer"]
+[node name="Version" type="Label" parent="Margin/VBoxContainer/HBoxContainer/MenuBar2/HBoxContainer" unique_id=392196921]
 layout_mode = 2
 text = "Godot Orchestrator v1.0.5"
 vertical_alignment = 1
 
-[node name="PluginUpdateAvailableButton" parent="Margin/VBoxContainer/HBoxContainer/MenuBar2/HBoxContainer" instance=ExtResource("2_hestl")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="HSplitContainer" type="HSplitContainer" parent="Margin/VBoxContainer"]
+[node name="HSplitContainer" type="HSplitContainer" parent="Margin/VBoxContainer" unique_id=1971597206]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VSplitContainer" type="VSplitContainer" parent="Margin/VBoxContainer/HSplitContainer"]
+[node name="VSplitContainer" type="VSplitContainer" parent="Margin/VBoxContainer/HSplitContainer" unique_id=289851347]
 custom_minimum_size = Vector2(302, 0)
 layout_mode = 2
 
-[node name="FilesList" parent="Margin/VBoxContainer/HSplitContainer/VSplitContainer" instance=ExtResource("3_nsrnn")]
+[node name="FilesList" parent="Margin/VBoxContainer/HSplitContainer/VSplitContainer" unique_id=748636570 instance=ExtResource("3_nsrnn")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="NodeTree" parent="Margin/VBoxContainer/HSplitContainer/VSplitContainer" instance=ExtResource("4_t06vx")]
+[node name="NodeTree" parent="Margin/VBoxContainer/HSplitContainer/VSplitContainer" unique_id=1138271510 instance=ExtResource("4_t06vx")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Margin/VBoxContainer/HSplitContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Margin/VBoxContainer/HSplitContainer" unique_id=990382476]
 layout_mode = 2
 
-[node name="OrchestrationGraphs" type="MarginContainer" parent="Margin/VBoxContainer/HSplitContainer/VBoxContainer"]
+[node name="OrchestrationGraphs" type="MarginContainer" parent="Margin/VBoxContainer/HSplitContainer/VBoxContainer" unique_id=1328496947]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="OrchestrationGraph" parent="Margin/VBoxContainer/HSplitContainer/VBoxContainer/OrchestrationGraphs" instance=ExtResource("5_pbcxq")]
+[node name="OrchestrationGraph" parent="Margin/VBoxContainer/HSplitContainer/VBoxContainer/OrchestrationGraphs" unique_id=1314523849 instance=ExtResource("5_pbcxq")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Margin/VBoxContainer/HSplitContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Margin/VBoxContainer/HSplitContainer/VBoxContainer" unique_id=1064351423]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="TogglePanelButton" type="Button" parent="Margin/VBoxContainer/HSplitContainer/VBoxContainer/HBoxContainer"]
+[node name="TogglePanelButton" type="Button" parent="Margin/VBoxContainer/HSplitContainer/VBoxContainer/HBoxContainer" unique_id=568435496]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(24, 32)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 focus_mode = 0
-icon = SubResource("ImageTexture_ppusv")
+icon = SubResource("DPITexture_efuxl")
 flat = true
 expand_icon = true
 
-[node name="Label" type="Label" parent="Margin/VBoxContainer/HSplitContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Margin/VBoxContainer/HSplitContainer/VBoxContainer/HBoxContainer" unique_id=1066815117]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -207,18 +189,18 @@ text = "Godot Orchestrator v1.0.5"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="Margin"]
+[node name="MarginContainer2" type="MarginContainer" parent="Margin" unique_id=955070540]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Margin/MarginContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Margin/MarginContainer2" unique_id=1317406721]
 layout_mode = 2
 size_flags_vertical = 0
 alignment = 2
 
-[node name="About" type="Window" parent="."]
+[node name="About" type="Window" parent="." unique_id=59311104]
 title = "About Godot Orchestrator"
 initial_position = 2
 size = Vector2i(800, 500)
@@ -227,15 +209,15 @@ transient = true
 exclusive = true
 unresizable = true
 
-[node name="AboutView" parent="About" instance=ExtResource("5_2m6ak")]
+[node name="AboutView" parent="About" unique_id=293208209 instance=ExtResource("5_2m6ak")]
 
-[node name="NewFileDialog" type="FileDialog" parent="."]
+[node name="NewFileDialog" type="FileDialog" parent="." unique_id=1295454491]
 title = "Create new orchestration"
 initial_position = 2
 size = Vector2i(750, 500)
 filters = PackedStringArray("*.tres ; Resources")
 
-[node name="OpenFileDialog" type="FileDialog" parent="."]
+[node name="OpenFileDialog" type="FileDialog" parent="." unique_id=402440480]
 title = "Open a File"
 initial_position = 1
 size = Vector2i(700, 500)
@@ -243,19 +225,18 @@ ok_button_text = "Open"
 file_mode = 0
 filters = PackedStringArray("*.tres ; Resources")
 
-[node name="SaveFileDialog" type="FileDialog" parent="."]
+[node name="SaveFileDialog" type="FileDialog" parent="." unique_id=450529839]
 title = "Save an Orchestration"
 initial_position = 1
 size = Vector2i(700, 500)
 filters = PackedStringArray("*.tres ; Resources")
 
-[node name="CloseDiscardConfirmDialog" type="ConfirmationDialog" parent="."]
+[node name="CloseDiscardConfirmDialog" type="ConfirmationDialog" parent="." unique_id=504540197]
 initial_position = 1
 dialog_text = "The file '%s' has been changed. Do you want to discard the changes?"
 
-[node name="ContextMenu" type="PopupMenu" parent="."]
+[node name="ContextMenu" type="PopupMenu" parent="." unique_id=2002892767]
 
-[connection signal="editor_restart_requested" from="Margin/VBoxContainer/HBoxContainer/MenuBar2/HBoxContainer/PluginUpdateAvailableButton" to="." method="_on_restart_editor"]
 [connection signal="file_popup_menu_requested" from="Margin/VBoxContainer/HSplitContainer/VSplitContainer/FilesList" to="." method="_on_files_list_context_menu"]
 [connection signal="file_selected" from="Margin/VBoxContainer/HSplitContainer/VSplitContainer/FilesList" to="." method="_on_files_list_file_selected"]
 [connection signal="pressed" from="Margin/VBoxContainer/HSplitContainer/VBoxContainer/HBoxContainer/TogglePanelButton" to="." method="_toggle_panel"]

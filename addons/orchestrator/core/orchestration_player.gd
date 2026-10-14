@@ -1,4 +1,4 @@
-@icon("res://addons/orchestrator/assets/icons/OrchestratorLogo.svg")
+@icon("res://addons/orchestrator/assets/icons/GDVScriptPlay.svg")
 class_name OrchestrationPlayer
 extends Node
 ## Allows playing an [code]Orchestration[/code] from a scene tree node.
